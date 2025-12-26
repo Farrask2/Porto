@@ -87,12 +87,16 @@
  <!-- Home Section Start -->
    <!-- About Section Start -->
 <section id="home" class="bg-yellow-100 py-16 text-center">
+    
     <div class="container mx-auto px-4">
     <div class="container mx-auto px-4 text-left">
-        <h35 class="text-4xl font-bold text-gray-800 mb-4">Halo! Saya Farras Kus Priyadi</h35>
-        
+        <h3 class="text-4xl font-bold text-gray-800 mb-4
+           opacity-0 translate-y-6 transition-all duration-700 scroll-animate"> Halo! Saya Farras Kus Priyadi</h3>
         <!-- Front-End Card -->
-      <div class="bg-blue-500 rounded-2xl shadow-md p-8 hover:shadow-xl transition">
+      <div class="bg-blue-500 rounded-2xl shadow-md p-8 hover:shadow-xl
+            opacity-0 translate-y-10 scale-95
+            transition-all duration-700 ease-out
+            scroll-animate">
         <div class="flex items-center gap-4 mb-4">
           <div class="p-3 bg-yellow-200 rounded-xl">
             💻
@@ -107,23 +111,33 @@
       </div>
 
       <!-- Cybersecurity Card -->
-      <div class="bg-green-500 rounded-2xl shadow-md p-8 hover:shadow-xl transition">
+    <div class="bg-green-500 rounded-2xl shadow-md p-8 hover:shadow-xl
+            opacity-0 translate-y-10 scale-95
+            transition-all duration-700 ease-out
+            scroll-animate">
+
         <div class="flex items-center gap-4 mb-4">
           <div class="p-3 bg-yellow-200 rounded-xl">
             🔐
           </div>
-          <h3 class="text-xl font-semibold">Cybersecurity Enthusiast</h3>
+          <canvas id="matrix" class="absolute inset-0 opacity-20 pointer-events-none"></canvas>
+          <h3 class="glitch text-2xl font-bold text-white mb-4" data-text="Cybersecurity">
+  Cybersecurity
+</h3>
+
         </div>
-        <p class="text-gray-700 leading-relaxed">
+        <p id="hacker-text" class="text-white mt-4 font-mono">
           Saya memiliki pengalaman dasar dalam web application security testing seperti
           SQL Injection, brute-force attack, dan vulnerability analysis. Saya juga pernah
           menggunakan tools seperti Nmap, Burp Suite, Metasploit, serta mengonfigurasi
           Web Application Firewall (ModSecurity).
         </p>
+
+
       </div>
    <div class="relative inline-block group">
   <!-- Button -->
- <div class="relative inline-block">
+ <div class=" justify-center relative inline-block">
   <button
     onclick="toggleResume()"
     class="bg-blue-500 text-white px-5 py-2 rounded-lg
@@ -150,10 +164,16 @@
  <!-- Portofolio Section Start -->
 <section id="portfolio" class="py-16">
     <div class="container mx-auto px-4">
-        <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center">My Projects</h3>
+        <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center
+           opacity-0 translate-y-6 transition-all duration-700 scroll-animate">My Projects</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Project Card 1 -->
-            <div class="bg-[#e7d3b1] shadow rounded overflow-hidden">
+            <div class="bg-white rounded-xl shadow-md p-6
+            hover:scale-105
+            opacity-0 translate-y-10 scale-95
+            transition-all duration-700 ease-out
+            scroll-animate">
+
                 <img src="asset/img/Screenshot (422).png" alt="Project 1" class="w-full">
                 <div class="p-4">
                     <h4 class="text-xl font-bold text-gray-800">Sistem Pendukung keputusan pemilihan laptop untuk kebutuhan kerja </h4>
@@ -161,17 +181,133 @@
                 </div>
             </div>
             <!-- Project Card 3 -->
-            <div class="bg-[#e7d3b1] shadow rounded overflow-hidden">
+            <div class="bg-white rounded-xl shadow-md p-6
+            hover:scale-105
+            opacity-0 translate-y-10 scale-95
+            transition-all duration-700 ease-out
+            scroll-animate">
                 <img src="asset/img/nasa.png" alt="Project 1" class="w-full">
                 <div class="p-4">
                     <h4 class="text-xl font-bold text-gray-800">Nasarentcar</h4>
                     <p class="text-gray-600">Proyek ini bertujuan untuk merancang sistem informasi berbasis website bagi Nasarentcar untuk menggantikan sistem pemesanan manual. Website ini dikembangkan untuk meningkatkan efisiensi operasional, mempercepat transaksi, dan memberikan kemudahan bagi pelanggan dalam melakukan reservasi kendaraan kapan saja dan di mana saja.</p>
                 </div>
             </div>
+            <!-- Project Card 3 -->
+            <div class="bg-white rounded-xl shadow-md p-6
+            hover:scale-105
+            opacity-0 translate-y-10 scale-95
+            transition-all duration-700 ease-out
+            scroll-animate">
+
+                <img src="asset/img/inject.png" alt="Project 1" class="w-full">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold text-gray-800">ANALISIS DAN MITIGASI KERENTANAN SQL INJECTION PADA DVWA MENGGUNAKAN STANDAR OWASP A03:2021</h4>
+                    <p class="text-gray-600">Proyek ini berfokus pada analisis kerentanan SQL Injection pada aplikasi Damn Vulnerable Web Application (DVWA) sebagai studi kasus, dengan mengacu pada standar keamanan OWASP Top 10 A03:2021 (Injection).
+
+                      Analisis dilakukan dengan menguji berbagai teknik SQL Injection, seperti tautology-based injection, union-based injection, dan error-based injection, untuk memahami bagaimana input pengguna yang tidak tervalidasi dapat dimanfaatkan untuk mengakses atau memanipulasi data secara tidak sah.
+
+                      Hasil pengujian menunjukkan bahwa kerentanan SQL Injection terjadi akibat:
+                <ol class="text-gray-600"">
+                    <li> 1. Tidak adanya validasi dan sanitasi input </li>
+
+                    <li> 2.Penggunaan query SQL dinamis </li>
+
+                    <li> 3.Tidak diterapkannya mekanisme keamanan database yang memadai</li>
+
+                <br>Sebagai langkah mitigasi, diterapkan beberapa solusi keamanan, antara lain:</br>
+
+              <li>1. Penggunaan Prepared Statements (Parameterized Queries) </li>
+
+            <li>2. Validasi dan sanitasi input pengguna</li>
+
+            <li>3. Pembatasan hak akses database (Least Privilege)</li>
+
+            <li>4. Penanganan error yang aman untuk mencegah kebocoran informasi</li>
+
+            <li>5. praktik secure coding sesuai standar OWASP</li>
+
+              Proyek ini bertujuan meningkatkan pemahaman tentang risiko SQL Injection serta menunjukkan pentingnya penerapan standar keamanan aplikasi web untuk melindungi data dan sistem dari serangan injeksi..</p>
+                </div>
+            </div>
         </div>
     </div>
     
 </section>
+<!-- Skill-->
+ <section id="skills" class="py-16 bg-yellow-100">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <!-- Title -->
+    <h2 class="text-3xl font-bold text-center mb-10 text-gray-800
+           opacity-0 translate-y-6 transition-all duration-700 scroll-animate">
+  Skills
+</h2>
+
+
+    <!-- Skills Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Front-End -->
+      <div class="bg-white rounded-xl shadow-md p-6
+            hover:scale-105
+            opacity-0 translate-y-10 scale-95
+            transition-all duration-700 ease-out
+            scroll-animate">
+
+        <h3 class="text-xl font-semibold mb-4 text-blue-600">
+          Front-End Development
+        </h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>✅ HTML5</li>
+          <li>✅ CSS3</li>
+          <li>✅ JavaScript</li>
+          <li>✅ Tailwind CSS</li>
+          <li>✅ Responsive Design</li>
+        </ul>
+      </div>
+
+      <!-- Cybersecurity -->
+      <div class="bg-white rounded-xl shadow-md p-6
+            hover:scale-105
+            opacity-0 translate-y-10 scale-95
+            transition-all duration-700 ease-out
+            scroll-animate">
+
+        <h3 class="text-xl font-semibold mb-4 text-red-600">
+          Cybersecurity
+        </h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>✅ SQL Injection</li>
+          <li>✅ XSS</li>
+          <li>✅ OWASP Top 10</li>
+          <li>✅ DVWA Testing</li>
+          <li>✅ Basic Web Security</li>
+        </ul>
+      </div>
+
+      <!-- Tools -->
+      <div class="bg-white rounded-xl shadow-md p-6
+            hover:scale-105
+            opacity-0 translate-y-10 scale-95
+            transition-all duration-700 ease-out
+            scroll-animate">
+
+        <h3 class="text-xl font-semibold mb-4 text-green-600">
+          Tools & Others
+        </h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>✅ Git & GitHub</li>
+          <li>✅ VS Code</li>
+          <li>✅ Netlify</li>
+          <li>✅ Figma (Basic)</li>
+          <li>✅ Linux (Basic)</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- Portofolio Section End -->
 
  <!-- Footer Section Start -->
